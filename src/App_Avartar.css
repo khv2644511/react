@@ -1,38 +1,5 @@
 /** @format */
 
-.counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  margin: 2rem;
-  width: 300px;
-  height: 200px;
-  border: 2px solid goldenrod;
-  border-radius: 10px;
-}
-
-.counter:hover {
-  background-color: rgb(246, 243, 197);
-}
-
-.number {
-  font-size: 7rem;
-}
-
-.button {
-  font-size: 2rem;
-  padding: 0.2rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  background-color: rgb(215, 127, 12);
-  background: linear-gradient(
-    90deg,
-    rgba(215, 217, 12, 1) 0%,
-    rgba(253, 220, 29, 1) 100%
-  );
-}
-
 .orange {
   color: orange;
 }
