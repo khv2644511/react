@@ -11,6 +11,7 @@ export default function AppXY() {
         console.log(e.clientX, e.clientY);
         // setPosition({ x: e.clientX, y: e.clientY });
         // 만약 수평으로만 이동이 가능하다면?
+        // setPosition((prev) => ({ x: e.clientX, y: prev.y, z: prev.z }));
         setPosition((prev) => ({ ...prev, x: e.clientX }));
       }}
     >
