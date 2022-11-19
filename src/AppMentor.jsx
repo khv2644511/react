@@ -30,10 +30,10 @@ export default function AppMentor() {
       </button>
       <button
         onClick={() => {
-          const title = prompt(`what is your mentor's title?`);
+          // const title = prompt(`what is your mentor's title?`);
           setPerson((prev) => ({
             ...prev,
-            mentor: { ...prev.mentor, title: title },
+            mentor: { ...prev.mentor, title: "주니어개발자" },
           }));
         }}
       >
