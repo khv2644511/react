@@ -1,5 +1,4 @@
 import React, { useReducer, useState } from "react";
-import personReducer from "./reducer/person-reducer";
 
 export default function AppMentors() {
   // const [person, setPerson] = useState(initialValue);
@@ -9,36 +8,35 @@ export default function AppMentors() {
     console.log("jd");
     const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
     const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-    dispatch({ type: "updated", prev, current });
-    // setPerson((person) => ({
-    //   ...person,
-    //   mentors: person.mentors.map((mentor) => {
-    //     if (mentor.name === prev) {
-    //       return { ...mentor, name: current };
-    //     }
-    //     return mentor;
-    //   }),
-    // }));
+    setPerson((person) => ({
+      ...person,
+      mentors: person.mentors.map((mentor) => {
+        if (mentor.name === prev) {
+          return { ...mentor, name: current };
+        }
+        return mentor;
+      }),
+    }));
   };
 
   const handleAdd = () => {
     const name = prompt(`멘토 이름은?`);
     const title = prompt(`멘토 직함은?`);
-    // setPerson((person) => ({
-    //   ...person,
-    //   // mentors: [...person.mentors, { name: name, title: title }],
-    //   mentors: [{ name: name, title: title }, ...person.mentors],
-    // }));
-    dispatch({ type: "added", name, title });
+    setPerson((person) => ({
+      ...person,
+      // mentors: [...person.mentors, { name: name, title: title }],
+      mentors: [{ name: name, title: title }, ...person.mentors],
+    }));
   };
 
   const handleDelete = () => {
-    const del = prompt(`삭제할 이름을 작성해주세요`);
-    // setPerson((person) => ({
-    //   ...person,
-    //   mentors: person.mentors.filter((mentor) => mentor.name !== del),
-    // }));
-    dispatch({ type: "deleted", del });
+    {
+      const del = prompt(`삭제할 이름을 작성해주세요`);
+      setPerson((person) => ({
+        ...person,
+        mentors: person.mentors.filter((mentor) => mentor.name !== del),
+      }));
+    }
   };
 
   return (
@@ -61,7 +59,7 @@ export default function AppMentors() {
   );
 }
 
-const initialPerson = {
+const initialValue = {
   name: "엘리",
   title: "개발자",
   mentors: [

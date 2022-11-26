@@ -19,7 +19,7 @@ export default function AppMentor() {
       </p>
       <button
         onClick={() => {
-          const name = prompt(`what is your mentor's name?`);
+          console.log("zmd");
           setPerson((prev) => ({
             ...prev,
             mentor: { ...prev.mentor, name: name },
