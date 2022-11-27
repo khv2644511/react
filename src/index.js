@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import AppMentors from "./AppMentors";
+import AppForm from "./AppForm";
 // import AppMentor from "./AppMentor";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppMentors />
+    <AppForm />
   </React.StrictMode>
 );
 
